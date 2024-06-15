@@ -11,6 +11,7 @@ pipe = pipeline("text2text-generation", model="google/flan-t5-small")
 def home():
     return {"message":"Hello World"}
 
+
 @app.get("generate")
 def generate(text:str):
     output = pipe(text)
